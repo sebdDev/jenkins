@@ -23,7 +23,7 @@ import org.slf4j.Logger;
  */
 public class Transformer {
 	
-	private static Logger Logger = LoggerFactory.getLogger(Transformer.class);
+	private static Logger logger = LoggerFactory.getLogger(Transformer.class);
 	private Map<String, String> tokens = new HashMap<String, String>();
 	
 	/**
@@ -92,9 +92,9 @@ public class Transformer {
 		
 		String test = transformer.transform(text);
 		
-		Logger.info(test);
-		Logger.warn(test);
-		Logger.error(test);
+		logger.info(test);
+		logger.warn(test);
+		logger.error(test);
 		//System.out.println(test);
 	}
 
