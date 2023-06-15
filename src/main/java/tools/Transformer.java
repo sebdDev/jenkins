@@ -24,7 +24,7 @@ import org.slf4j.Logger;
 public class Transformer {
 	
 	private static Logger logger = LoggerFactory.getLogger(Transformer.class);
-	private Map<String, String> tokens = new HashMap<String, String>();
+	private Map<String, String> tokens = new HashMap<>();
 	
 	/**
 	 * Adds a new token which will used when transforming texts.
@@ -36,18 +36,7 @@ public class Transformer {
 		tokens.put(token, value);
 	}
 	
-	/*
-	public String transform(String text) {
-		
-		String transformedText = text;
-		
-		for(Entry<String,String> entry : tokens.entrySet()) {
-			transformedText = transformedText.replace(entry.getKey(), entry.getValue());
-		}
-		return transformedText;
-		
-	}*/
-
+	
 	/**
 	 * Transforms a text by replacing the token with their corresponding values
 	 * Each token should be between brackets, for example :
@@ -55,8 +44,7 @@ public class Transformer {
 	 * Hello {name}, how are uou doing?
 	 * @param text
 	 * @return return 
-	 */
-	
+	 */	
 	public String transform(String text) {
 		
 		StringBuilder stringBuilder = new StringBuilder();
@@ -95,7 +83,7 @@ public class Transformer {
 		logger.info(test);
 		logger.warn(test);
 		logger.error(test);
-		//System.out.println(test);
+		
 	}
 
 }
