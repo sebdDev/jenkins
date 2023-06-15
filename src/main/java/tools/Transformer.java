@@ -2,9 +2,11 @@ package tools;
 
 import java.util.HashMap;
 import java.util.Map;
-import java.util.Map.Entry;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
+import org.slf4j.LoggerFactory;
+import org.slf4j.Logger;
+
 
 /**
  * 
@@ -21,6 +23,7 @@ import java.util.regex.Pattern;
  */
 public class Transformer {
 	
+	private static Logger Logger = LoggerFactory.getLogger(Transformer.class);
 	private Map<String, String> tokens = new HashMap<String, String>();
 	
 	/**
@@ -81,6 +84,7 @@ public class Transformer {
 	 * @param args
 	 */
 	public static void main(String[] args) {
+		
 		Transformer transformer = new Transformer();
 		transformer.addToken("name", "seb");
 		
@@ -88,7 +92,10 @@ public class Transformer {
 		
 		String test = transformer.transform(text);
 		
-		System.out.println(test);
+		Logger.info(test);
+		Logger.warn(test);
+		Logger.error(test);
+		//System.out.println(test);
 	}
 
 }
